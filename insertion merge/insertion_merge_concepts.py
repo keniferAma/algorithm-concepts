@@ -14,7 +14,12 @@ def insertion_sort(baraja):
             # index y esta vez vamos a comparar esa menor con el anterior.
             # Basicamente en este bucle estamos tratando de salir mediante que la carta derecha sea menor a la de las
             # de la izquierda.
-        baraja[left_hand_index + 1] = right_hand
+            # Basicamente baraja[left_hand_index] debería salir repetido de este bucle con el fin de que right_hand
+            # sea asignado a la derecha de uno de esos repetidos, especificamente con el primer repetido. 
+            # (pasa a ser reemplazado)
+        baraja[left_hand_index + 1] = right_hand # si sale del bucle satisfactoriamente, quiere decir que "right_hand"
+        # sale menor que left_hand y por consiguiente se va a ubicar o bien sea al final izquierdo o a la derecha
+        # del menor a él.
     return baraja
 
 
@@ -35,3 +40,19 @@ hand have values greater than the card in your right hand, then place
 this card as the leftmost card in your left hand. At all times, the cards
 held in your left hand are sorted, and these cards were originally the top
 cards of the pile on the table."""
+
+
+
+
+# ahora vamos a intentar replicarlo
+
+
+def insertion(lista):
+    for n in range(1, len(lista)):
+        key = lista[n]
+        j = n - 1
+        while j > 0 and lista[j] > key:
+            lista[j + 1] = lista[j]
+            j -= 1
+
+        lista[j + 1] = key
