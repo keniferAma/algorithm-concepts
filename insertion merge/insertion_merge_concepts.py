@@ -1,16 +1,21 @@
 
 lista_de_elementos = [9, 56, 43, 67, 2, 0]
 
-def insertion_sort(A):
-    n = len(A)
-    for i in range(1, n):
-        key = A[i]
-        j = i - 1
-        while j >= 0 and A[j] > key:
-            A[j + 1] = A[j]
-            j -= 1
-        A[j + 1] = key
-    return A
+def insertion_sort(baraja):
+    n = len(baraja)
+    for carta in range(1, n):
+        right_hand = baraja[carta]
+        left_hand_index = carta - 1 # Estamos asumiendo que la primera carta ya se encuentra en la mano izquierda.
+        while left_hand_index >= 0 and baraja[left_hand_index] > right_hand:
+            baraja[left_hand_index + 1] = baraja[left_hand_index]
+            left_hand_index -= 1
+            # Este bucle while tiene una gran particularidad:
+            # Primero lo que hace es convertir esa carta que es menor a la izquierda en dicha carta, luego devuelve el
+            # index y esta vez vamos a comparar esa menor con el anterior.
+            # Basicamente en este bucle estamos tratando de salir mediante que la carta derecha sea menor a la de las
+            # de la izquierda.
+        baraja[left_hand_index + 1] = right_hand
+    return baraja
 
 
 print(insertion_sort(lista_de_elementos))
