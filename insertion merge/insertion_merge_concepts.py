@@ -14,8 +14,8 @@ def insertion_sort(baraja):
             # index y esta vez vamos a comparar esa menor con el anterior.
             # Basicamente en este bucle estamos tratando de salir mediante que la carta derecha sea menor a la de las
             # de la izquierda.
-            # Basicamente baraja[left_hand_index] debería salir repetido de este bucle con el fin de que right_hand
-            # sea asignado a la derecha de uno de esos repetidos, especificamente con el primer repetido. 
+            # Basicamente baraja[left_hand_index] debería salir de este bucle con espacio en blanco a su izquierda
+            # con el fin de que right_hand sea asignado a la derecha del espacio en blanco.
             # (pasa a ser reemplazado)
         baraja[left_hand_index + 1] = right_hand # si sale del bucle satisfactoriamente, quiere decir que "right_hand"
         # sale menor que left_hand y por consiguiente se va a ubicar o bien sea al final izquierdo o a la derecha
