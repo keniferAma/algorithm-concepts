@@ -56,3 +56,13 @@ def insertion(lista):
             j -= 1
 
         lista[j + 1] = key
+
+
+
+# INVARIANTE DE BUCLE: 
+
+# Es una sentencia que nos confirma antes y después de algún bucle que dicha condicion se cumple antes y despues de 
+# ejecutarse dicho bucle. En nuestro ejemplo sería algo como: la sublista "lista[n - j]" siempre está ordenada de 
+# forma ascendente, lo cual es cierto ya que cada vez que se ejecuta un ciclo del bucle for, ya tendremos un 
+# nuevo elemento ordenado. Es como una sentencia o afirmación que nos ayuda a entender mejor los algoritmos y además 
+# nos puede ayudar a saber si realmente nuestro algoritmo esta desempeñando la función para la cual fue creado.
