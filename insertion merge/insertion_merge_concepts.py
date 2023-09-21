@@ -51,7 +51,7 @@ def insertion(lista):
     for n in range(1, len(lista)):
         key = lista[n]
         j = n - 1
-        while j > 0 and lista[j] > key:
+        while j >= 0 and lista[j] > key:
             lista[j + 1] = lista[j]
             j -= 1
 
@@ -66,3 +66,33 @@ def insertion(lista):
 # forma ascendente, lo cual es cierto ya que cada vez que se ejecuta un ciclo del bucle for, ya tendremos un 
 # nuevo elemento ordenado. Es como una sentencia o afirmación que nos ayuda a entender mejor los algoritmos y además 
 # nos puede ayudar a saber si realmente nuestro algoritmo esta desempeñando la función para la cual fue creado.
+
+"""*Initialization: It is true prior to the first iteration of the loop.
+*Maintenance: If it is true before an iteration of the loop, it remains true
+before the next iteration.
+*Termination: The loop terminates, and when it terminates, the invariant
+—usually along with the reason that the loop terminated—gives us a
+useful property that helps show that the algorithm is correct."""
+
+
+
+
+# Ejercicio tratando de invertir la funcion de insersion antes mencionada.
+def insertion(lista):
+    for n in range(1, len(lista)):
+        key = lista[n]
+        j = n - 1
+        while j >= 0 and lista[j] < key:
+            lista[j + 1] = lista[j]
+            j -= 1
+
+        lista[j + 1] = key
+
+
+lista_de_elementos = [9, 56, 43, 67, 2, 0]
+
+insertion(lista_de_elementos)
+
+print(lista_de_elementos)
+
+
