@@ -51,8 +51,29 @@ print(encontrar_indice_v2(array, 5))
 
 
 
+
+
+
 A = [1,0,0,1,0,1,0,0,1]
 B = [0,1,0,1,0,1,1,0,1]
+
+
+
+def decimal_a_binario(n: int):
+    nuevo_array = []
+    while n > 0:
+        residuo = n % 2
+        nuevo_array.append(residuo)
+        n = n // 2
+    return nuevo_array
+
+
+def sumatoria(array: list):
+    n = len(array)
+    suma = 0
+    for i in range(n):
+        suma += array[i] * 2 ** i
+    return decimal_a_binario(suma)
 
 
 def ADD_BINARY_INTEGERS(A, B, n):
@@ -61,9 +82,16 @@ def ADD_BINARY_INTEGERS(A, B, n):
     for i in range(n - 1, -1, -1):
         C[i + 1] = (A[i] + B[i] + carry) % 2
         carry = (A[i] + B[i] + carry) // 2
-        print(C)
+        #print(C)
     C[0] = carry
     return C
 
-print(ADD_BINARY_INTEGERS(A, B, 6))
+
+print(ADD_BINARY_INTEGERS(sumatoria(A), sumatoria(B), 9))
+print(sumatoria(A))
+print(sumatoria(B))
+
+
+
+
 
