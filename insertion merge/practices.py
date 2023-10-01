@@ -23,7 +23,7 @@ def insertio_sort_repaso(array):
 
     return array
 
-array = [5, 7, 9, 3, 1, 3, 7]
+array = [9, 7, 5, 5, 7, 2, 3, 1]
 print(insertio_sort_repaso(array=array))
 
 
@@ -33,8 +33,8 @@ print(insertio_sort_repaso(array=array))
 A1 = [9, 7, 5, 2]
 A2 = [7, 5, 3, 1]
 
-def merge(array_1, array_2):
-    result = [9, 7, 5, 5, 7, 2, 3, 1]
+def merge(original, array_1, array_2):
+    result = original
     i = 0
     j = 0
     k = 0
@@ -61,4 +61,21 @@ def merge(array_1, array_2):
 
     return result
 
-print(merge(array_1=A1, array_2=A2))
+
+
+# Ahora vamos a tratar de replicar la función recursiva.
+
+def merge_sort(A):
+    n = len(A)
+    middle = n // 2
+    if n == 1:
+        return [A[0]]
+
+    right_array = merge_sort(A[middle:])
+    left_array = merge_sort(A[:middle])
+
+    return merge(A, right_array, left_array)
+
+print(merge_sort(array))
+
+
