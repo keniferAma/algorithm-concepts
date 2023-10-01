@@ -37,3 +37,13 @@ problema original."""
 # la cantidad de nodos que tuvo nuestro arbol, es decir que nuestra ecuación final sería n * log n teniendo 
 # como la primera n la multiplicación de n * la cantidad de nodos que contiene el arbol en cada una de su 
 # recursividad
+
+
+# Algo para tener en cuenta: cn, es decir la constante de n está relacionada con la manera como se divide y 
+# posteriormente se unen de nuevo las recursividades, o cuanto se demora en entrar y salir cada funcion 
+# en el stack o pila, esto va determinado por la operación que une dicha constante con las recursividades.
+
+# una ecucacion muy usada para analisis de este tipo de algoritmo de merge sort es: T(n) = aT(n/b) + D(n) + C(n)
+# donde: aT = a la cantidad de subprocesos en los cuales se divide el problema, n/b = en cuantas partes se divide
+# el problema por cada ramificación, D(n) = al tiempo que se utiliza en dividir cada ramificación, 
+# y por último C(n) = al tiempo que tarda en unir o combinar o conquistar de nuevo cada nodo o subproceso. 
