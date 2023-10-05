@@ -47,3 +47,7 @@ problema original."""
 # donde: aT = a la cantidad de subprocesos en los cuales se divide el problema, n/b = en cuantas partes se divide
 # el problema por cada ramificación, D(n) = al tiempo que se utiliza en dividir cada ramificación, 
 # y por último C(n) = al tiempo que tarda en unir o combinar o conquistar de nuevo cada nodo o subproceso. 
+# ALGO IMPORTANTE QUE DEBEMOS ACLARAR CON RESPECTO A "a" ES QUE ES LA CANTIDAD DE SUBPROBLEMAS EN LOS QUE SE
+# DIVIDE EL ALGORITMO, MAS NO ES LA CANTIDAD DE NODOS QUE TIENE DICHO ALGORITMO.
+# Entonces sabiendo eso, en el merge sort lo que hacemos es dividir en 2 partes cada nodo, lo que significa
+# que "a" sería igual a 2. 
