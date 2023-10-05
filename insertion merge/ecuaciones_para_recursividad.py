@@ -51,3 +51,12 @@ problema original."""
 # DIVIDE EL ALGORITMO, MAS NO ES LA CANTIDAD DE NODOS QUE TIENE DICHO ALGORITMO.
 # Entonces sabiendo eso, en el merge sort lo que hacemos es dividir en 2 partes cada nodo, lo que significa
 # que "a" sería igual a 2. 
+
+
+# AHORA VAMOS A TRATAR DE HACER ALGUNAS ACLARACIONES RELACIONADAS A LA ECUACIÓN: O(1) if n <= n0:
+# Esto significa que si el tamaño de n0, el cual hemos definido en nuestro algoritmo solamente requiere de una
+# operación para ser resuelto, entonces podríamos decir de el tiempo big O del algoritmo es de O(1).
+# Debemos recordar que n es igual al numero total de elementos en la lista del algoritmo, mientras que n0 sería
+# la cantidad de elementos en los cuales nosotros hemos decidido que sea el punto de inflexión de dicho algoritmo.
+# Entonces por mera lógica, si hemos decidido que el algoritmo analize 3 como n0 del total de 5 como n, obviamente
+# va a tomar 1 solo proceso, lo cual se traduce en O(1).
