@@ -93,3 +93,24 @@ lista de n elementos, el algoritmo Merge Sort puede ordenarla en un tiempo propo
 La razón por la que ves ambas formas es porque están describiendo diferentes aspectos del algoritmo. La relación 
 de recurrencia describe cómo se comporta el algoritmo, mientras que la complejidad de tiempo describe cuánto tiempo 
 tarda el algoritmo en ejecutarse en términos del tamaño de la entrada12."""
+
+
+
+# AHORA VAMOS A ANALIZAR LA ECUACION MAESTRA EN ALGORITMOS RECURSIVOS:
+# las reglas nos dicen lo siguiente:
+"""Caso 1: Si f(n) es O(n^c), donde c < log_b(a), entonces la complejidad temporal del algoritmo 
+es Θ(n^(log_b(a))).
+
+Caso 2: Si f(n) es Θ(n^c log^k(n)), donde c = log_b(a) y k ≥ 0, entonces la complejidad temporal del algoritmo 
+es Θ(n^c log^(n)).
+
+Caso 3: Si f(n) es Ω(n^c), donde c > log_b(a), y si se cumple que af(n/b) ≤ kf(n) para alguna 
+constante k < 1 y suficientemente grande n, entonces la complejidad temporal del algoritmo es Θ(f(n))."""
+
+# Vamos a tomar como ejemplo el algoritmo recursivo merge sort el cual es: T(n) = 2T(n/2) + c(n)
+# donde: a = 2, b = 2 y f(n) = O(n), ya que es la constante de la función big o
+# Ahora procedemos a resolver log_b(a) de la parte de la ecuación c < log_b(a):
+# log_2(2) = 1.
+# Ahora seguimos con f(n) = O(n), es decir n está elevado a la 1
+# Luego hacemos la comparación: log_2(2) = 1 = O(n) = 1, es decir que aplica para el segundo caso, que nos propone
+# que los valores de n^c = donde c = log_b(a), el cual nos arroja una ecuacion: Θ(n^c log^(n)).
