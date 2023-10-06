@@ -64,9 +64,9 @@ problema original."""
 
 # en el algoritmo T(n) = O(1) si n < n0 o sino aT(n/b) + C(n) + D(n):
 # si el algoritmo no es recursivo entonces se maneja con la segunda parte de la formula. ahora bien
-# cuando usamos dicha ecuación, analizamos C(n), que es el tiempo que tarda en dividirse el algoritmo, es decir, 
+# cuando usamos dicha ecuación, analizamos D(n), que es el tiempo que tarda en dividirse el algoritmo, es decir, 
 # el tiempo que toma la operación que este manipulando la recursividad, en el merge sort sería de O(1), ya que no hay
-# ninguna operación, sino que solamente se divide y D(n) que es el tiempo u operación que tarda para combinarsen los
+# ninguna operación, sino que solamente se divide y C(n) que es el tiempo u operación que tarda para combinarsen los
 # subproblemas, el cual, en merge sort sería la comparación mediante "<" y ">" en los bucles while, lo cual es de 
 # big O O(n), debido a que estamos practicamente pasando por cada uno de los elementos.
 # Ahora habiendo analizado ambos casos, donde se divide y se combinan de nuevo los subproblemas, podemos tomar el 
