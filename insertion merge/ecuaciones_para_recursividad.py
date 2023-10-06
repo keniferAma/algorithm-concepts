@@ -114,3 +114,5 @@ constante k < 1 y suficientemente grande n, entonces la complejidad temporal del
 # Ahora seguimos con f(n) = O(n), es decir n está elevado a la 1
 # Luego hacemos la comparación: log_2(2) = 1 = O(n) = 1, es decir que aplica para el segundo caso, que nos propone
 # que los valores de n^c = donde c = log_b(a), el cual nos arroja una ecuacion: Θ(n^c log^(n)).
+# Si en otro escenario nos encontramos que big O es igual a O(n^2) entonces aplicaríamos para la tercera ecuacion,
+# es decir Θ(f(n)). (claro está, tomando los mismo valores de a y b).
