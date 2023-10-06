@@ -60,3 +60,20 @@ problema original."""
 # la cantidad de elementos en los cuales nosotros hemos decidido que sea el punto de inflexión de dicho algoritmo.
 # Entonces por mera lógica, si hemos decidido que el algoritmo analize 3 como n0 del total de 5 como n, obviamente
 # va a tomar 1 solo proceso, lo cual se traduce en O(1).
+
+
+# en el algoritmo T(n) = O(1) si n < n0 o sino aT(n/b) + C(n) + D(n):
+# si el algoritmo no es recursivo entonces se maneja con la segunda parte de la formula. ahora bien
+# cuando usamos dicha ecuación, analizamos C(n), que es el tiempo que tarda en dividirse el algoritmo, es decir, 
+# el tiempo que toma la operación que este manipulando la recursividad, en el merge sort sería de O(1), ya que no hay
+# ninguna operación, sino que solamente se divide y D(n) que es el tiempo u operación que tarda para combinarsen los
+# subproblemas, el cual, en merge sort sería la comparación mediante "<" y ">" en los bucles while, lo cual es de 
+# big O O(n), debido a que estamos practicamente pasando por cada uno de los elementos.
+# Ahora habiendo analizado ambos casos, donde se divide y se combinan de nuevo los subproblemas, podemos tomar el 
+# peor de los casos, el cual es al combinarsen de nuevo los subproblemas, es decir O(n).
+
+# Ya sabiendo esto, simplemente contamos en cuantas partes se divide el problema principal y reemplazamos los 
+# valores en "a" y "b", que al parecer serían proporcionales, ya que la cantidad en la que se divide el problema
+# principal es 2, y la cantidad de subproblemas resultantes sería igualemente de 2.
+# Por ello es que la ecuación del algoritmos de recursividad merge sort es T(n) = 2T(n/2) + C(n). (según el analisis
+# debería haber sido D(n) pero creo que es debido a que se toma C(n) como una constante general del algoritmo.)
