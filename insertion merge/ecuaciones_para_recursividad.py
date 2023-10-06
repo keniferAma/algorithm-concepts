@@ -77,3 +77,19 @@ problema original."""
 # principal es 2, y la cantidad de subproblemas resultantes sería igualemente de 2.
 # Por ello es que la ecuación del algoritmos de recursividad merge sort es T(n) = 2T(n/2) + C(n). (según el analisis
 # debería haber sido D(n) pero creo que es debido a que se toma C(n) como una constante general del algoritmo.)
+
+
+# ALGUNAS ACLARACIONES POR LA INTELIGENCIA ARTIFICIAL RELACIONADO A RELACION DE RECURRENCIA Y COMPLEJIDAD DE TIEMPO:
+"""La ecuación T(n) = 2T(n/2) + C(n) es una relación de recurrencia que describe cómo el algoritmo Merge Sort 
+divide el problema en subproblemas y combina las soluciones1. En esta ecuación, T(n) es el tiempo total requerido 
+para ordenar una lista de n elementos, 2T(n/2) representa las dos llamadas recursivas al algoritmo para ordenar las 
+dos mitades de la lista, y C(n) representa el tiempo requerido para combinar las dos listas ordenadas en una sola 
+lista1.
+
+Por otro lado, n log n es la complejidad de tiempo del algoritmo Merge Sort. Esta es una medida de cuánto crece el 
+tiempo de ejecución del algoritmo a medida que aumenta el tamaño de la entrada2. En otras palabras, si tienes una 
+lista de n elementos, el algoritmo Merge Sort puede ordenarla en un tiempo proporcional a n log n2.
+
+La razón por la que ves ambas formas es porque están describiendo diferentes aspectos del algoritmo. La relación 
+de recurrencia describe cómo se comporta el algoritmo, mientras que la complejidad de tiempo describe cuánto tiempo 
+tarda el algoritmo en ejecutarse en términos del tamaño de la entrada12."""
