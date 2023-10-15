@@ -79,3 +79,24 @@ def merge_sort(A):
 print(merge_sort(array))
 
 
+
+
+# Es posible implementar el binary search con el insertion sort?
+
+def insertion_sort(array):
+    n = len(array)
+    for i in range(1, n):
+        key = array[i]
+        j = i - 1
+        while j >= 0 and key < array[j]:
+            array[j + 1] = array[j] # corremos una posición a la derecha la última del bloque organizado.
+            # Al pasar eso, luego nuestro índice de "j" (los organizados) va un paso hacia atrás y nuevamente
+            # comparamos con key.
+            j -= 1
+
+        array[j + 1] = key
+    return array
+
+
+array_binary = [1, 34, 2, 56, 7, 89, 0, 5]
+print(insertion_sort(array_binary))
