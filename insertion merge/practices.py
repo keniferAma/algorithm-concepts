@@ -79,3 +79,51 @@ def merge_sort(A):
 print(merge_sort(array))
 
 
+
+
+# Es posible implementar el binary search con el insertion sort?
+
+def insertion_sort(array):
+    n = len(array)
+    for i in range(1, n):
+        key = array[i]
+        j = i - 1
+        while j >= 0 and key < array[j]:
+            array[j + 1] = array[j] # corremos una posición a la derecha la última del bloque organizado.
+            # Al pasar eso, luego nuestro índice de "j" (los organizados) va un paso hacia atrás y nuevamente
+            # comparamos con key.
+            j -= 1
+
+        array[j + 1] = key
+    return array
+
+
+array_binary = [1, 34, 2, 56, 7, 89, 0, 5]
+print(insertion_sort(array_binary))
+
+
+
+
+# Exercise 2.3-8:
+"""Describe un algoritmo que, dado un conjunto S de n enteros y otro entero x, determine si S 
+contiene dos elementos que suman exactamente x. Tu algoritmo debería tomar Θ(n lg n) tiempo en el 
+peor de los casos."""
+# Exercise done by me:
+
+
+s = [2, 4, 4, 13, 3, 2, 7]
+x = 9
+
+def exercise(array, target):
+    suma = 0
+    for i in range(target, 0, -1):
+        pares = (i, suma)
+        suma += 1
+
+        if pares[0] in array and pares[-1] in array:
+            return "Yes"
+        
+    return "No"             
+
+print(exercise(s, x))
+
